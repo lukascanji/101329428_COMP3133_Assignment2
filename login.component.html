@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email" type="email">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter your password" type="password">
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+  login() {
+    // Simulate login success
+    localStorage.setItem('isAuthenticated', 'true');
+    // Redirect to the employee list
+    this.router.navigate(['/employee-list']);
+  }
+  
